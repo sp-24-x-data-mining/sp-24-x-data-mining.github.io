@@ -1,0 +1,114 @@
+body, header, main, footer {
+    text-align: center; /* Centers text elements */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers block-level elements */
+    width: 90%;
+}
+header img {
+    width: 80%; /* Full width on smaller screens */
+    margin-left: 400px;
+    height: auto;
+    display: block;
+}
+
+@media (min-width: 768px) { /* Adjustments for larger screens */
+    header img {
+        width: 50%; /* Reduces the size on larger screens */
+    }
+}
+header, main, footer {
+    width: 80%; /* Full width of their container */
+}
+
+section {
+    width: 90%; /* Adjust the width as needed */
+    margin: 20px auto; /* Centers sections horizontally and adds space */
+    padding: 20px;
+    box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+img {
+    max-width: 100%; /* Ensures image is not larger than its container */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.images-row {
+    display: flex;
+    justify-content: space-between; /* Adjusts to space between items rather than around */
+    align-items: flex-start; /* Aligns items at the start to handle varying text heights */
+    flex-wrap: wrap; /* Allows elements to wrap in smaller screens */
+    margin: 5px 0;
+}
+
+.images-row figure {
+    width: 20%; /* Adjust width as needed */
+    text-align: center; /* Centers the content of the figure */
+    margin: 0 10px; /* Adjusted margin for reduced spacing */
+}
+
+.images-row figure:first-child {
+    margin-left: 140px; /* Adds margin to the left of the first image */
+}
+
+.images-row figure:last-child {
+    margin-right: 0px; /* Adds margin to the right of the last image */
+}
+
+.images-row img {
+    width: 100%; /* Ensures the image fills the figure */
+    height: auto;
+}
+
+figcaption {
+    color: #666; /* Sets the color of the caption text */
+    font-size: 0.9em; /* Smaller font size for captions */
+}
+.sidebar {
+    position: fixed; /* Fixed position along the left side */
+    left: 0;
+    top: 0;
+    width: 200px; /* Adjust the width as needed */
+    height: 100%;
+    background-color: #f4f4f4; /* Light grey background */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar ul {
+    list-style-type: none; /* Removes default list styling */
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 10px;
+    margin-bottom: 10px; /* Adds space between links */
+}
+
+.sidebar a {
+    text-decoration: none; /* Removes underline from links */
+    color: black; /* Sets link color */
+    display: block; /* Makes entire list item clickable */
+}
+.sidebar a {
+    text-decoration: none; /* Removes underline from links */
+    color: #1a8cff; /* Bright blue as default link color */
+    display: block; /* Makes entire list item clickable */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for color and background */
+}
+
+.sidebar a:hover, .sidebar a:focus {
+    color: #ffcc00; /* Bright yellow on hover/focus */
+    background-color: #333; /* Dark background for contrast */
+}
+
+.sidebar a:active {
+    color: #ff5733; /* Bright orange when clicked */
+    background-color: #ddd; /* Lighter background on click */
+}
+
+.sidebar a:visited {
+    color: #9d55b8; /* Purple for visited links */
+}
